@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .chat-container {
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+      }
+
+      .chat-header {
+        background-color: #f2f2f2;
+        padding: 10px;
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .chat-body {
+        height: 400px;
+        overflow-y: scroll;
+        padding: 10px;
+      }
+
+      .chat-message {
+        margin-bottom: 10px;
+      }
+
+      .sender {
+        font-weight: bold;
+      }
+
+      .chat-footer {
+        background-color: #f2f2f2;
+        padding: 10px;
+        text-align: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+
+      input[type='text'] {
+        width: 70%;
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 10px;
+        border: none;
+      }
+
+      button[type='submit'] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+      }
+      @media only screen and (max-width: 600px) {
+        .chat-container {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>Chat Panel</h2>
+      </div>
+      <div class="chat-body">
+        <div class="chat-message">
+          <p class="sender">User 1:</p>
+          <p class="message">Hi, how are you?</p>
+        </div>
+        <div class="chat-message">
+          <p class="sender">User 2:</p>
+          <p class="message">I'm good, thanks. How about you?</p>
+        </div>
+      </div>
+      <div class="chat-footer">
+        <form>
+          <input type="text" placeholder="Enter your message..." />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

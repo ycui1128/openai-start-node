@@ -1,0 +1,22 @@
+@import '../node_modules/bootstrap/scss/_variables.scss';
+$blue: #0d6eee;
+$original-enable-shadows: $enable-shadows;
+$enable-shadows: true;
+.custom-class {
+  background-color: $blue;
+  color: white;
+  padding: 10px;
+}
+
+// styles using $enable-shadows
+.box {
+  @if $enable-shadows {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+}
+input {
+  color: var(--bs-blue);
+}
+
+// reset $enable-shadows to original value
+// $enable-shadows: $original-enable-shadows;

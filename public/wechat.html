@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .chat-panel {
+        width: 500px;
+        height: 400px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+      }
+
+      .header h2 {
+        margin: 0;
+        font-size: 20px;
+        color: #333;
+      }
+
+      .messages-container {
+        flex: 1;
+        overflow-y: scroll;
+        padding: 20px;
+      }
+
+      .message-box {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+      }
+
+      .message-box.received {
+        background-color: #f7f7f7;
+        text-align: left;
+      }
+
+      .message-box.sent {
+        background-color: #e6e6e6;
+        text-align: right;
+      }
+
+      .message-box p {
+        margin: 0;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .input-container {
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      input[type='text'] {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 16px;
+        color: #333;
+        margin-right: 10px;
+      }
+
+      button {
+        width: 20%;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-panel">
+      <div class="header">
+        <h2>Chat</h2>
+      </div>
+      <div class="messages-container">
+        <div class="message-box received">
+          <p>Hello, how can I help you today?</p>
+        </div>
+        <div class="message-box sent">
+          <p>
+            Hi, I was just wondering if you could assist me with some
+            information?
+          </p>
+        </div>
+      </div>
+      <div class="input-container">
+        <input type="text" placeholder="Type your message here..." />
+        <button>Send</button>
+      </div>
+    </div>
+  </body>
+</html>
